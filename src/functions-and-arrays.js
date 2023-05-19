@@ -101,6 +101,24 @@ function averageNumbers() {
 // Bonus - Iteration #4.1
 
 
+function averageNumbers(numbersArray) {
+  let sum = 0;
+  
+  // Calculate the sum of all numbers
+  for (let i = 0; i < numbersArray.length; i++) {
+    sum += numbersArray[i];
+  }
+  
+  // Calculate the average
+  let average = sum / numbersArray.length;
+  
+  return average;
+}
+
+// Test the averageNumbers function
+const numbersArray = [2, 6, 9, 10, 7, 4, 1, 9];
+let result = averageNumbers(numbersArray);
+console.log("The average is:", result);
 
 
 
