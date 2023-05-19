@@ -62,18 +62,18 @@ const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {
+function averageNumbers(array) {
 
   let sum = 0;
 
   for (let i = 0; i < array.length; i++) {
       sum += array[i];
   }
-  return(sum);
-  
+
   let average = sum / array.length;
   console.log(average);
   
+  return(sum);
   
 }
 
@@ -122,8 +122,6 @@ console.log("The average is:", result);
 
 
 
-
-
 // Iteration #5: Unique arrays
 const wordsUnique = [
   'crab',
@@ -165,19 +163,24 @@ function uniquifyArray() {
     if (arr6.includes(word)) {
       return true;
   } else {
-      return false;
+      return false;  }
   }
+
+
+  function WordExist(words, word) {
+    // Iterate through each word in the array
+    for (var i = 0; i < words.length; i++) {
+      // Check if the current word matches the search word
+      if (words[i] === word) {
+        return true; // Word found, return true
+      }
+    }
+    
+    return false; // Word not found, return false
   }
-
-
-
-
-
-
-
-
-
-
+  
+const testingWordFunction = WordExist()
+console.log(testingWordFunction)
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -194,16 +197,19 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(words, word) {
+  var count = 0;
 
+  // Iterate through each word in the array
+  for (var i = 0; i < words.length; i++) {
+    // Check if the current word matches the search word
+    if (words[i] === word) {
+      count++; // Increment count if word is found
+    }
+  }
 
-
-
-
-
-
-
-
+  return count;
+}
 
 
 
